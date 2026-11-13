@@ -1,0 +1,1 @@
+IMAGE_ANALYSIS_SYSTEM_PROMPT = "Carefully describe visible image content without inferring unverifiable details."

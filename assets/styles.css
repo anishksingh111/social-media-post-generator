@@ -1,0 +1,518 @@
+
+/* =====================================================
+   SOCIAL STUDIO AI — PREMIUM DARK THEME
+   ===================================================== */
+
+:root {
+    --bg: #090b13;
+    --surface: #111522;
+    --surface-2: #171c2c;
+    --surface-3: #20263a;
+    --border: rgba(255, 255, 255, 0.09);
+
+    --purple: #9b7bff;
+    --purple-light: #b8a3ff;
+    --purple-dark: #7352e8;
+
+    --text: #f5f4fc;
+    --muted: #a0a6ba;
+    --green: #54d6a0;
+
+    --radius: 18px;
+}
+
+/* =====================================================
+   GLOBAL
+   ===================================================== */
+
+.stApp {
+    background:
+        radial-gradient(
+            ellipse at 50% -20%,
+            rgba(112, 76, 220, 0.16),
+            transparent 48%
+        ),
+        var(--bg);
+    color: var(--text);
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+[data-testid="stToolbar"] {
+    right: 1rem;
+}
+
+.main .block-container {
+    max-width: 1120px;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+html, body, [class*="css"] {
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+/* =====================================================
+   SIDEBAR
+   ===================================================== */
+
+[data-testid="stSidebar"] {
+    background: #0d101b;
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.sidebar-note {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 17px;
+    margin-top: 12px;
+}
+
+.sidebar-note strong {
+    color: var(--purple-light);
+    font-size: 0.9rem;
+}
+
+.sidebar-note p {
+    color: var(--muted);
+    font-size: 0.83rem;
+    margin: 12px 0 0 0;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero-wrapper {
+    text-align: center;
+    padding: 45px 15px 38px;
+    margin-bottom: 22px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: rgba(155, 123, 255, 0.10);
+    border: 1px solid rgba(155, 123, 255, 0.28);
+    color: var(--purple-light);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    margin-bottom: 22px;
+}
+
+.hero-wrapper h1 {
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    font-weight: 850;
+    color: var(--text);
+    margin: 0;
+}
+
+.hero-wrapper h1 span {
+    display: block;
+    background: linear-gradient(
+        100deg,
+        #a58aff,
+        #d0bfff,
+        #8e71ff
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-wrapper p {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   WORKFLOW STEPS
+   ===================================================== */
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border);
+    padding: 13px 15px;
+    border-radius: 13px;
+    margin-bottom: 20px;
+}
+
+.step-item span {
+    display: grid;
+    place-items: center;
+    width: 31px;
+    height: 31px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(155, 123, 255, 0.16);
+    color: var(--purple-light);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.step-item strong {
+    font-size: 0.88rem;
+    color: var(--text);
+}
+
+/* =====================================================
+   SECTION HEADINGS
+   ===================================================== */
+
+.section-heading {
+    color: var(--purple-light);
+    font-size: 0.77rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 18px 0 8px;
+}
+
+h2, h3, h4 {
+    color: var(--text);
+    letter-spacing: -0.4px;
+}
+
+p, li {
+    line-height: 1.7;
+}
+
+/* =====================================================
+   UPLOADER
+   ===================================================== */
+
+[data-testid="stFileUploader"] {
+    background: rgba(155, 123, 255, 0.035);
+    border: 1px dashed rgba(155, 123, 255, 0.55);
+    border-radius: var(--radius);
+    padding: 17px;
+    transition: 0.2s ease;
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: var(--purple-light);
+    background: rgba(155, 123, 255, 0.07);
+}
+
+[data-testid="stFileUploader"] section {
+    background: transparent;
+    border: none;
+}
+
+[data-testid="stFileUploader"] button {
+    border-radius: 10px;
+}
+
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+[data-testid="stImage"] img {
+    border-radius: 17px;
+    border: 1px solid var(--border);
+    object-fit: contain;
+}
+
+/* =====================================================
+   INPUTS
+   ===================================================== */
+
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"],
+.stMultiSelect div[data-baseweb="select"] {
+    background: var(--surface-2) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+    border-radius: 11px !important;
+}
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+    border-color: var(--purple) !important;
+    box-shadow: 0 0 0 1px var(--purple) !important;
+}
+
+.stTextArea textarea {
+    line-height: 1.7;
+}
+
+label {
+    color: #d8d9e6 !important;
+    font-weight: 600 !important;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.stButton > button,
+.stDownloadButton > button {
+    min-height: 43px;
+    border-radius: 11px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--text);
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    border-color: var(--purple);
+    color: white;
+    background: var(--surface-3);
+    transform: translateY(-1px);
+}
+
+.stButton > button[kind="primary"] {
+    background: linear-gradient(
+        105deg,
+        var(--purple-dark),
+        var(--purple)
+    );
+    color: white;
+    border: none;
+    box-shadow: 0 7px 24px rgba(115, 82, 232, 0.23);
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: linear-gradient(
+        105deg,
+        #8765f2,
+        #b19aff
+    );
+    box-shadow: 0 9px 30px rgba(115, 82, 232, 0.35);
+}
+
+.stButton > button:disabled {
+    opacity: 0.45;
+}
+
+/* =====================================================
+   CONTAINERS / CARDS
+   ===================================================== */
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    border-color: var(--border) !important;
+    border-radius: var(--radius) !important;
+    background: rgba(17, 21, 34, 0.70);
+}
+
+div[data-testid="stExpander"] {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.018);
+}
+
+div[data-testid="stExpander"] summary {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* =====================================================
+   KEYWORD CHIPS
+   ===================================================== */
+
+.keyword-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 12px 0;
+}
+
+.keyword-chip,
+.feature-chip {
+    display: inline-block;
+    padding: 7px 12px;
+    margin: 4px 5px 4px 0;
+    border-radius: 30px;
+    background: rgba(155, 123, 255, 0.10);
+    border: 1px solid rgba(155, 123, 255, 0.24);
+    color: #c6b7ff;
+    font-size: 0.79rem;
+    font-weight: 600;
+}
+
+/* =====================================================
+   GENERATED POSTS
+   ===================================================== */
+
+.post-platform {
+    display: inline-block;
+    background: rgba(155, 123, 255, 0.13);
+    color: var(--purple-light);
+    border: 1px solid rgba(155, 123, 255, 0.25);
+    border-radius: 30px;
+    padding: 7px 12px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.3;
+    margin: 8px 0 14px;
+}
+
+.post-hook {
+    padding: 14px 17px;
+    border-left: 3px solid var(--purple);
+    border-radius: 0 10px 10px 0;
+    background: rgba(155, 123, 255, 0.075);
+    color: #d9ceff;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 15px 0 22px;
+}
+
+.caption-box {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 19px;
+    color: #e8e8f2;
+    font-size: 0.96rem;
+    line-height: 1.9;
+}
+
+.hashtag-box {
+    overflow-wrap: anywhere;
+    background: rgba(155, 123, 255, 0.07);
+    border: 1px solid rgba(155, 123, 255, 0.16);
+    border-radius: 12px;
+    padding: 14px;
+    color: #bba8ff;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   TABS
+   ===================================================== */
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+    background: transparent;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 17px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.stTabs [aria-selected="true"] {
+    background: rgba(155, 123, 255, 0.15) !important;
+    color: var(--purple-light) !important;
+    border-color: rgba(155, 123, 255, 0.4) !important;
+}
+
+/* =====================================================
+   PROGRESS / STATUS
+   ===================================================== */
+
+.stProgress > div > div > div {
+    background: linear-gradient(
+        90deg,
+        var(--purple-dark),
+        var(--purple-light)
+    );
+}
+
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.main-footer {
+    text-align: center;
+    padding: 45px 15px 15px;
+    margin-top: 55px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-brand {
+    color: var(--purple-light);
+    font-size: 0.85rem;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.main-footer p {
+    color: var(--text);
+    font-size: 0.95rem;
+    margin: 10px 0;
+}
+
+.main-footer span {
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .main .block-container {
+        padding: 1.2rem 1rem 2rem;
+    }
+
+    .hero-wrapper {
+        padding: 28px 5px;
+    }
+
+    .hero-wrapper h1 {
+        font-size: 2.7rem;
+        letter-spacing: -1.8px;
+    }
+
+    .hero-wrapper p {
+        font-size: 0.92rem;
+    }
+
+    .step-item {
+        padding: 9px;
+        gap: 7px;
+    }
+
+    .step-item strong {
+        font-size: 0.75rem;
+    }
+
+    .post-title {
+        font-size: 1.35rem;
+    }
+}
